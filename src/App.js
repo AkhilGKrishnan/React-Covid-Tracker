@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Covid Tracker App
+          Covid Tracker Application
         </a>
       </header>
     </div>
