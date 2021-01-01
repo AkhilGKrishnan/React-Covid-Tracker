@@ -4,14 +4,10 @@ node_js:
 cache:
   directories:
     - node_modules
-before_deploy:
-  - npm install netlify-cli -g
-  - npm run build
 script:
-  - npm test
   - npm run build
 notifications:
-  slack:
+  slack: hackclub:KqNigPX4nP2Iq54hF93LjqRR
     on_success: always
 deploy:
   provider: script
