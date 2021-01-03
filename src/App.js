@@ -1,13 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
-import Api from './Api'
+import React, { Component} from 'react';
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Switch
+} from 'react-router-dom';
+import Header from './components/Header'
+import World from './components/World'
+import India from './components/India'
+import Footer from './components/Footer'
 
-function App() {
-  return (
-    <div>
-      <h1>Covid Tracker</h1>
-    </div>
-  );
+
+class App extends Component{
+  constructor(){
+    super();
+  }
+  render(){
+    return (
+      <div className="container-fluid">
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <India/>
+            </Route>
+            <Route exact path="/india">
+              <India/>
+            </Route>
+            <Route path="/world">
+              <World/>
+            </Route>
+          </Switch>
+          <Footer/>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
