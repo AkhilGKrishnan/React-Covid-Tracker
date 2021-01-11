@@ -24,7 +24,6 @@ class State extends Component {
             {
               states.map((state,k)=>{
                 let districts = this.state.statedata[state].districtData;
-                let disctrict_keys = Object.keys(districts)
 
                 let total_active = 0;
                 let total_confirmed = 0;
@@ -46,7 +45,7 @@ class State extends Component {
                   <Card>
                     <Card.Header>
                       <Accordion.Toggle as={Button} variant="primary" eventKey={k}>
-                        {state} - <span className="btn-dark p-1 mr-2">Total Cases: {total_active}</span> <span className="btn-dark p-1 mr-2">Active: {total_active}</span> <span className="btn-dark p-1 mr-2">Recovered: {total_recovered}</span> <span className="btn-dark p-1 mr-2">Deaths: {total_deaths}</span>  
+                        {state} - <span className="btn-dark p-1 mr-2">Total Cases: {total_confirmed}</span> <span className="btn-dark p-1 mr-2">Active: {total_active}</span> <span className="btn-dark p-1 mr-2">Recovered: {total_recovered}</span> <span className="btn-dark p-1 mr-2">Deaths: {total_deaths}</span>  
                       </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey={k}>
