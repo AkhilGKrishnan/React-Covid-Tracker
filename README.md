@@ -8,4 +8,3 @@ This is a react based covid tracking application
 docker-compose up
 ```
 
-Hosted Link: https://keralacovidtracker.netlify.app
